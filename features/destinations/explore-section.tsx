@@ -4,7 +4,7 @@
 import { useMemo, useState } from "react";
 import DestinationCard from "./destination-card";
 import { destinations } from "./data";
-import type { DestinationCategory } from "@/types/destination";
+import type { DestinationCategory } from "@/types/destinations";
 
 type CategoryFilter = "Semua" | DestinationCategory;
 

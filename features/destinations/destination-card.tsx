@@ -1,12 +1,12 @@
 
 import Link from "next/link";
-import type { Destination } from "@/types/destination";
+import type { Destination } from "@/types/destinations";
 
 type Props = {
   destination: Destination;
 };
 
-export default function DestinationCard({ destination }: Props) {
+export default function DestinationCard({ destination }: Readonly<Props>) {
   return (
     <article className="group overflow-hidden rounded-2xl border border-stone-200 bg-white transition hover:-translate-y-1 hover:shadow-lg">
       <div className="flex h-40 items-end bg-gradient-to-br from-emerald-900 via-emerald-700 to-stone-500 p-5">
@@ -44,12 +44,9 @@ export default function DestinationCard({ destination }: Props) {
 
         <Link
           href={`/destinations/${destination.slug}`}
-          className="inline-flex pt-2 text-sm font-semibold text-emerald-800 hover:text-emerald-600"
+          className="inline-flex items-center gap-2 pt-2 text-sm font-semibold text-emerald-800 hover:text-emerald-600"
         >
-          Lihat destinasi
-          <span className="ml-2" aria-hidden="true">
-            →
-          </span>
+          Lihat destinasi<span aria-hidden="true">→</span>
         </Link>
       </div>
     </article>
